@@ -1,0 +1,26 @@
+{
+  "name": "projeto-museu-api",
+  "version": "1.0.0",
+  "description": "Backend do projeto de registro de visitantes de um museu",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon index.js",
+    "build": "",
+    "lint": "",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajuteixeira/museu-registro-visitantes-api.git"
+  },
+  "author": "ajuteixeira",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.5",
+    "nodemon": "^3.0.2"
+  },
+  "homepage": "https://github.com/ajuteixeira/museu-registro-visitantes-api#readme"
+}
