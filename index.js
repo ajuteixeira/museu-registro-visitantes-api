@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 
+const usuarioRoutes = require("./routes/usuarioRoutes");
 const visitanteRoutes = require("./routes/visitanteRoutes");
 
 const app = express();
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
   res.send("Bem-vindo à API do museu");
 });
 
+app.use("/login", usuarioRoutes);
 app.use("/visitante", visitanteRoutes);
 
 app.all("*", (req, res) => {
