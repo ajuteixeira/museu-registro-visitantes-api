@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/login", usuarioRoutes);
-app.use("/visitante", visitanteRoutes);
+app.use("/visitantes", visitanteRoutes);
 
 app.all("*", (req, res) => {
   res.status(404).send("Rota não encontrada");
