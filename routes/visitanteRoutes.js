@@ -3,11 +3,11 @@ const router = express.Router();
 const controller = require("../controllers/visitanteController");
 
 router.get("/", async (req, res) => {
-  res.send(await controller.listar());
+  res.send(await controller.listAll());
 });
 
 router.post("/", async (req, res) => {
-  res.send(await controller.cadastrar(req.body));
+  res.send(await controller.register(req.body));
 });
 
 module.exports = router;

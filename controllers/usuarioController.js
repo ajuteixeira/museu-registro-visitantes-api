@@ -1,7 +1,7 @@
 const DB = require("../database/index");
 const tabela = "usuario";
 
-async function logar(data) {
+async function login(data) {
   try {
     if (!data.usuario_email) {
       throw new Error("Email é o obrigatório");
@@ -30,5 +30,5 @@ async function logar(data) {
 }
 
 module.exports = {
-  logar,
+  login,
 };
