@@ -12,7 +12,7 @@ async function register(data) {
     const date = new Date().toISOString().split("T")[0]; //formata a data
 
     data.visitante_idade = parseInt(data.visitante_idade); //converte de string p/ número
-    data.visitante_genero = data.visitante_genero === "masculino" ? 1 : 2; //atribui valor 1 para masculino e 2 para feminino
+    data.visitante_genero = parseInt(data.visitante_genero);
 
     const line = await DB.execute(
       `INSERT INTO ${tabela} (visitante_nome, visitante_idade, visitante_profissao, visitante_cidade, visitante_bairro, visitante_genero, visitante_cpf, visitante_data) VALUES ('${data.visitante_nome}', '${data.visitante_idade}', '${data.visitante_profissao}', '${data.visitante_cidade}', '${data.visitante_bairro}', '${data.visitante_genero}', '${data.visitante_cpf}', '${date}');`
