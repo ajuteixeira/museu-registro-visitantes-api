@@ -14,7 +14,7 @@ async function login(data) {
       `SELECT usuario_id FROM ${tabela} WHERE usuario_email = '${data.usuario_email}' AND usuario_senha = '${data.usuario_senha}';`
     );
     if (result.length > 0) {
-      return "deu bommm";
+      return "success";
     } else {
       return {
         type: "warning",
