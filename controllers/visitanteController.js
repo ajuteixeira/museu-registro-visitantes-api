@@ -1,7 +1,7 @@
 const DB = require("../database/index");
 const tabela = "visitante";
 
-async function listAll(coluna = "visitante_id", ordem = "ASC") {
+async function listAll(coluna = "visitante_data", ordem = "ASC") {
   const results = await DB.execute(
     `SELECT * FROM ${tabela} ORDER BY ${coluna} ${ordem};`
   );
