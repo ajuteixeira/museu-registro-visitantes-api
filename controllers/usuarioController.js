@@ -13,19 +13,11 @@ async function login(data) {
     const result = await DB.execute(
       `SELECT usuario_id FROM ${tabela} WHERE usuario_email = '${data.usuario_email}' AND usuario_senha = '${data.usuario_senha}';`
     );
-    if (result.length > 0) {
-      return "success";
-    } else {
-      return {
-        type: "warning",
-        message: "Email ou senha estão incorretos",
-      };
-    }
+    const response =
+      result.length > 0 ? "success" : "Email ou senha estão incorretos";
+    return response;
   } catch (error) {
-    return {
-      type: "error",
-      message: error.message,
-    };
+    return error.message;
   }
 }
 
